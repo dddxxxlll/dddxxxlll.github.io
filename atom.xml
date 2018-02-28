@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>董昕亮</title>
+  <subtitle>雕栏玉彻应犹在，只是朱颜改</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-02-28T02:58:30.084Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>董昕亮</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS数组与对象的合并</title>
+    <link href="http://yoursite.com/2018/02/28/JS%E6%95%B0%E7%BB%84%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%90%88%E5%B9%B6/"/>
+    <id>http://yoursite.com/2018/02/28/JS数组与对象的合并/</id>
+    <published>2018-02-28T02:25:59.000Z</published>
+    <updated>2018-02-28T02:58:30.084Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Js数组与对象的合并、深拷贝、对象类型的判断&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>元素黏连特效</title>
+    <link href="http://yoursite.com/2018/01/04/%E5%85%83%E7%B4%A0%E9%BB%8F%E8%BF%9E%E7%89%B9%E6%95%88/"/>
+    <id>http://yoursite.com/2018/01/04/元素黏连特效/</id>
+    <published>2018-01-04T07:29:12.000Z</published>
+    <updated>2018-01-05T09:33:28.030Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;by &lt;a href=&quot;http://www.zhangxinxu.com/&quot;&gt;zhangxinxu&lt;/a&gt; from &lt;a href=&quot;http://www.zhangxinxu.com/wordpress/?p=6655&quot;&gt;http://www.zhangxinxu.com/wordpress/?p=6655&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js内存泄漏详解</title>
+    <link href="http://yoursite.com/2017/12/05/Js%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E5%87%A0%E7%A7%8D%E6%83%85%E5%86%B5/"/>
+    <id>http://yoursite.com/2017/12/05/Js内存泄漏的几种情况/</id>
+    <published>2017-12-05T03:53:29.000Z</published>
+    <updated>2017-12-05T06:42:47.305Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Js内存泄漏的几种情况与解决方法。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DragModel——可拖动模态框</title>
+    <link href="http://yoursite.com/2017/08/15/DragModel%E2%80%94%E2%80%94%E5%8F%AF%E6%8B%96%E5%8A%A8%E6%A8%A1%E6%80%81%E6%A1%86/"/>
+    <id>http://yoursite.com/2017/08/15/DragModel——可拖动模态框/</id>
+    <published>2017-08-15T04:13:58.000Z</published>
+    <updated>2017-08-17T03:53:56.131Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;实现功能：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;模态框可拖动&lt;/li&gt;
+&lt;li&gt;在模态框中打开模态框时，下面的模态框不可点击&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在线地址：&lt;br&gt;&lt;a href=&quot;https://dddxxxlll.github.io/DragModel/&quot;&gt;https://dddxxxlll.github.io/DragModel/&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mongodb的populate的用法</title>
+    <link href="http://yoursite.com/2017/08/07/Mongodb%E7%9A%84populate%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/08/07/Mongodb的populate的用法/</id>
+    <published>2017-08-07T09:47:10.000Z</published>
+    <updated>2017-08-08T06:44:51.439Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mongodb的populate的用法&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Mongodb" scheme="http://yoursite.com/tags/Mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Websocket通俗易懂的原理解释</title>
+    <link href="http://yoursite.com/2017/06/07/Websocket%E9%80%9A%E4%BF%97%E6%98%93%E6%87%82%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A/"/>
+    <id>http://yoursite.com/2017/06/07/Websocket通俗易懂原理解释/</id>
+    <published>2017-06-07T08:22:42.000Z</published>
+    <updated>2017-06-07T08:23:16.978Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看node的时候偶尔发现的博文，原出处找不到了。属于真通俗易懂，世界上多一点这种教程该有多好！&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://yoursite.com/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爱奇艺优酷免vip方法</title>
+    <link href="http://yoursite.com/2017/05/26/%E7%88%B1%E5%A5%87%E8%89%BA%E4%BC%98%E9%85%B7%E5%85%8Dvip%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/05/26/爱奇艺优酷免vip方法/</id>
+    <published>2017-05-26T06:15:57.000Z</published>
+    <updated>2017-05-26T06:46:50.064Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你怎么免费看爱奇艺等视频网站&quot;&gt;&lt;a href=&quot;#手把手教你怎么免费看爱奇艺等视频网站&quot; class=&quot;headerlink&quot; title=&quot;手把手教你怎么免费看爱奇艺等视频网站&quot;&gt;&lt;/a&gt;手把手教你怎么免费看爱奇艺等视频网站&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中This的详解</title>
+    <link href="http://yoursite.com/2017/05/08/JS%E4%B8%ADThis%E7%9A%84%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2017/05/08/JS中This的详解/</id>
+    <published>2017-05-08T08:09:54.000Z</published>
+    <updated>2017-05-08T09:45:44.796Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从绑定This的四种方式来全面解析JS中的This。&lt;br&gt;资料来源于&lt;a href=&quot;https://www.kickstarter.com/projects/getify/you-dont-know-js-book-series&quot;&gt;You Don’t Know JS系列丛书&lt;/a&gt;&lt;br&gt;感谢作者的开源以及YDKJS的中文翻译&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="ECMAScript6" scheme="http://yoursite.com/tags/ECMAScript6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS content换行技术实现字符loading效果</title>
+    <link href="http://yoursite.com/2017/04/12/CSS-content%E6%8D%A2%E8%A1%8C%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6loading%E6%95%88%E6%9E%9C/"/>
+    <id>http://yoursite.com/2017/04/12/CSS-content换行技术实现字符loading效果/</id>
+    <published>2017-04-12T06:48:40.000Z</published>
+    <updated>2017-04-12T07:23:29.687Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;偶然从&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2016/11/css-content-pre-animation-character-loading/&quot;&gt;张鑫旭大神&lt;/a&gt;博客看来的技巧&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原生js实现div拖拽并在任意位置放下</title>
+    <link href="http://yoursite.com/2017/04/11/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0div%E6%8B%96%E6%8B%BD%E5%B9%B6%E5%9C%A8%E4%BB%BB%E6%84%8F%E4%BD%8D%E7%BD%AE%E6%94%BE%E4%B8%8B/"/>
+    <id>http://yoursite.com/2017/04/11/原生js实现div拖拽并在任意位置放下/</id>
+    <published>2017-04-11T10:23:42.000Z</published>
+    <updated>2017-04-13T06:59:52.016Z</updated>
+    
+    <summary type="html">
+    
+      js实现拖拽效果，并熟悉setCapture()以及releaseCapture()函数
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>for/in、for、while、do/while循环和forEach遍历的跳过和中断</title>
+    <link href="http://yoursite.com/2017/04/07/for-in%E3%80%81for%E3%80%81while%E3%80%81do-while%E5%BE%AA%E7%8E%AF%E5%92%8CforEach%E9%81%8D%E5%8E%86%E7%9A%84%E8%B7%B3%E8%BF%87%E5%92%8C%E4%B8%AD%E6%96%AD/"/>
+    <id>http://yoursite.com/2017/04/07/for-in、for、while、do-while循环和forEach遍历的跳过和中断/</id>
+    <published>2017-04-07T10:37:41.000Z</published>
+    <updated>2017-04-07T10:56:28.184Z</updated>
+    
+    <summary type="html">
+    
+      JS各种循环的跳过和中断
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js中闭包等问题（转载）</title>
+    <link href="http://yoursite.com/2017/04/06/Js%E4%B8%AD%E9%97%AD%E5%8C%85%E7%AD%89%E9%97%AE%E9%A2%98%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/"/>
+    <id>http://yoursite.com/2017/04/06/Js中闭包等问题（转载）/</id>
+    <published>2017-04-06T07:33:16.000Z</published>
+    <updated>2017-04-07T11:00:31.911Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;第一道闭包问题&quot;&gt;&lt;a href=&quot;#第一道闭包问题&quot; class=&quot;headerlink&quot; title=&quot;第一道闭包问题&quot;&gt;&lt;/a&gt;第一道闭包问题&lt;/h1&gt;&lt;h2 id=&quot;题目代码及答案&quot;&gt;&lt;a href=&quot;#题目代码及答案&quot; class=&quot;headerlink&quot; title=&quot;题目代码及答案&quot;&gt;&lt;/a&gt;题目代码及答案&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;function fun(n,o) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  console.log(o)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  return &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    fun:function(m)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      return fun(m,n);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var a = fun(0);  a.fun(1);  a.fun(2);  a.fun(3);//undefined,?,?,?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var b = fun(0).fun(1).fun(2).fun(3);//undefined,?,?,?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,?,?,?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//问:三行a,b,c的输出分别是什么？`&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECMAScript6概要</title>
+    <link href="http://yoursite.com/2017/04/05/ECMAScript6%E6%A6%82%E8%A6%81/"/>
+    <id>http://yoursite.com/2017/04/05/ECMAScript6概要/</id>
+    <published>2017-04-05T07:43:18.000Z</published>
+    <updated>2017-04-06T02:16:16.719Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一-let与const&quot;&gt;&lt;a href=&quot;#一-let与const&quot; class=&quot;headerlink&quot; title=&quot;一  let与const&quot;&gt;&lt;/a&gt;一  let与const&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;let声明变量只在它所在的代码块中有效&lt;/li&gt;
+&lt;li&gt;let不存在变量提升：只能先声明再使用变量&lt;/li&gt;
+&lt;li&gt;暂时性死区：只要块级作用域内存在let或const命令，它所声明的变量就不再受外部影响，即使在外定义了相同变量名的全局变量。&lt;/li&gt;
+&lt;li&gt;不允许重复定义变量&lt;/li&gt;
+&lt;li&gt;块级作用域：在块级作用域中可以定义函数（5不行），但函数作用范围与let相同&lt;/li&gt;
+&lt;li&gt;do表达式：块级作用域没有返回值。let aaa = do{};则大括号里面内容有返回值赋给aaa。&lt;/li&gt;
+&lt;li&gt;const声明一个只读变量，不可更改，所以const声明的变量必须立刻初始化。&lt;/li&gt;
+&lt;li&gt;const的本质：变量指向的内存地址不可改变，如：const foo={}；foo.prop=123；就可以改变
+    
+    </summary>
+    
+      <category term="技术日志" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="ECMAScript6" scheme="http://yoursite.com/tags/ECMAScript6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown快速入门</title>
+    <link href="http://yoursite.com/2017/04/01/Markdown%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2017/04/01/Markdown快速入门/</id>
+    <published>2017-04-01T09:14:38.000Z</published>
+    <updated>2017-04-05T08:32:00.760Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;段落、标题、区块代码&quot;&gt;&lt;a href=&quot;#段落、标题、区块代码&quot; class=&quot;headerlink&quot; title=&quot;段落、标题、区块代码&quot;&gt;&lt;/a&gt;段落、标题、区块代码&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;html中的h1到h6标签主要用#来表示，有几个#就表示是几级标题&lt;/li&gt;
+&lt;li&gt;段落的话可以用“&amp;gt;”开头，也可以不用。不用的话会将整段话用p标签括起&lt;/li&gt;
+&lt;li&gt;换行：两个空格加回车，或者直接用br标签&lt;h3 id=&quot;修饰和强调&quot;&gt;&lt;a href=&quot;#修饰和强调&quot; class=&quot;headerlink&quot; title=&quot;修饰和强调&quot;&gt;&lt;/a&gt;修饰和强调&lt;/h3&gt;Markdown使用星号或下划线括起一段文字来标记强调区域。星号代表em标签，下划线代表strong标签&lt;br&gt;例子：&lt;em&gt;我要被强调啦&lt;/em&gt;  &lt;em&gt;我又要被强调啦&lt;/em&gt;&lt;br&gt;&lt;/br&gt;
+    
+    </summary>
+    
+      <category term="技术日志" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+</feed>
