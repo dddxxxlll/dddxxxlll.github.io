@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/28/JS数组与对象的合并/index.html">
 <meta property="og:site_name" content="董昕亮">
 <meta property="og:description" content="Js数组与对象的合并、深拷贝、对象类型的判断">
-<meta property="og:updated_time" content="2018-02-28T02:58:30.084Z">
+<meta property="og:updated_time" content="2018-02-28T03:32:17.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数组与对象的合并">
 <meta name="twitter:description" content="Js数组与对象的合并、深拷贝、对象类型的判断">
@@ -403,14 +403,10 @@
 <p>另外assign会覆盖原对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var o1 = &#123; a: 1 &#125;;</div><div class="line">var o2 = &#123; b: 2 &#125;;</div><div class="line">var o3 = &#123; c: 3 &#125;;</div><div class="line"></div><div class="line">var obj = Object.assign(o1, o2, o3);</div><div class="line">console.log(obj); // &#123; a: 1, b: 2, c: 3 &#125;</div><div class="line">console.log(o1);  // &#123; a: 1, b: 2, c: 3 &#125;, 注意目标对象自身也会改变。</div></pre></td></tr></table></figure></p>
 <h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var cloneObj = function(obj)&#123;</div><div class="line">    var str, newobj = obj.constructor === Array ? [] : &#123;&#125;;</div><div class="line">    if(typeof obj !== &apos;object&apos;)&#123;</div><div class="line">        return;</div><div class="line">    &#125; else if(window.JSON)&#123;</div><div class="line">        str = JSON.stringify(obj), //将对象化为字符串</div><div class="line">        newobj = JSON.parse(str); //还原</div><div class="line">    &#125; else &#123;</div><div class="line">        for(var i in obj)&#123;</div><div class="line">            newobj[i] = typeof obj[i] === &apos;object&apos; ?</div><div class="line">            cloneObj(obj[i]) : obj[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return newobj;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h2 id="对象类型的判断"><a href="#对象类型的判断" class="headerlink" title="对象类型的判断"></a>对象类型的判断</h2><ol>
-<li>typeof<br>形如 var x = “xx”; typeof x == ‘string’ typeof(x);</li>
-</ol>
-<p>返回类型有：’undefined’ “string” ‘number’ ‘boolean’ ‘function’ ‘object’<br>缺点：对于object类型不能细分是什么类型<br>优点：对空null的判断 ‘undefined’的应用</p>
-<ol>
-<li>instanceof<br>形如 var d = new String(‘test’); d instanceof String ==true;</li>
-</ol>
-<p>返回的类型有：String Number Boolean Function Object Array Date<br>优点：能区分出更细的类型如 Date Array 如 var num = 3; num instanceof Number 能返回具体的类型<br>缺点：直变量不能区分 必须采用new 的对象</p>
-<ol>
+<li><p>typeof<br>形如 var x = “xx”; typeof x == ‘string’ typeof(x);<br>返回类型有：’undefined’ “string” ‘number’ ‘boolean’ ‘function’ ‘object’<br>缺点：对于object类型不能细分是什么类型<br>优点：对空null的判断 ‘undefined’的应用</p>
+</li>
+<li><p>instanceof<br>形如 var d = new String(‘test’); d instanceof String ==true;<br>返回的类型有：String Number Boolean Function Object Array Date<br>优点：能区分出更细的类型如 Date Array 如 var num = 3; num instanceof Number 能返回具体的类型<br>缺点：直变量不能区分 必须采用new 的对象</p>
+</li>
 <li><p>constructor<br>形如：var x = []; x.constructor==Array;<br>优点：可以返回继承的类型<br>缺点: 不能对象的细分,如继承 必须手动修正</p>
 </li>
 <li><p>Object.prototype.toString.call();<br>优点：通用，返回”[objectString]” 具体object的类型<br>缺点：不能返回继承的类型</p>
