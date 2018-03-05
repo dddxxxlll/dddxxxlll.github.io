@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -89,12 +89,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="董昕亮">
-<meta property="og:url" content="http://yoursite.com/tags/CSS/index.html">
+<meta name="description" content="arguments以及caller与arguments.callee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中的arguments">
+<meta property="og:url" content="http://yoursite.com/2018/03/05/JS中的argument/index.html">
 <meta property="og:site_name" content="董昕亮">
+<meta property="og:description" content="arguments以及caller与arguments.callee">
+<meta property="og:updated_time" content="2018-03-05T07:39:49.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="董昕亮">
+<meta name="twitter:title" content="JS中的arguments">
+<meta name="twitter:description" content="arguments以及caller与arguments.callee">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/CSS/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/05/JS中的argument/"/>
 
 
 
 
 
-  <title> 标签: CSS | 董昕亮 </title>
+  <title> JS中的arguments | 董昕亮 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,74 +295,172 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        CSS
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/04/元素黏连特效/" itemprop="url">
-              
-                <span itemprop="name">元素黏连特效</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-04T15:29:12+08:00"
-              content="2018-01-04" >
-          01-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/12/CSS-content换行技术实现字符loading效果/" itemprop="url">
-              
-                <span itemprop="name">CSS content换行技术实现字符loading效果</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-12T14:48:40+08:00"
-              content="2017-04-12" >
-          04-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/JS中的argument/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="董昕亮">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="董昕亮">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JS中的arguments
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T15:27:59+08:00">
+                2018-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>arguments以及caller与arguments.callee<br><a id="more"></a></p>
+<h2 id="argument"><a href="#argument" class="headerlink" title="argument"></a>argument</h2><p>说明：<br>    在JavaScript中，arguments是对象的一个特殊属性。arguments对象就像数组，但是它却不是数组。<br>属性：<br>    length：获取arguments对象的长度。（函数实参长度）<br>    callee：引用当前正在执行的函数（callee也有length属性，为函数形参长度）</p>
+<ol>
+<li><p>隐藏参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function abc(x,y)&#123;</div><div class="line">    alert(x+&quot;,&quot;+y);</div><div class="line">　　for(var i=0;i&lt;=arguments.length;i+=)&#123;</div><div class="line">        alert(&quot; &quot;+arguments[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">abc(1,2,3)</div><div class="line">//output:1,2</div><div class="line">//output:1 2 3</div></pre></td></tr></table></figure>
+</li>
+<li><p>改变参数值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function abc(x,y,z)&#123;</div><div class="line">    arguments[2] = &quot;hello&quot;;</div><div class="line">    for(var i=0;i&lt;=arguments.length;i+=)&#123;</div><div class="line">        alert(&quot; &quot;+arguments[i]);</div><div class="line">    &#125;</div><div class="line">&#125;//output: 1 2 hello</div></pre></td></tr></table></figure>
+</li>
+<li><p>递归</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">求1到n的自然数之和</div><div class="line">function add(x)&#123;</div><div class="line">    if(x == 1) return 1;</div><div class="line">    else return n + arguments.callee(n-1);</div><div class="line">&#125;</div><div class="line">//其实callee对于匿名函数调用自身时就是一个福音了,比如对于没有命名的函数求1到n自然数之和</div><div class="line">var result = function(x)&#123;</div><div class="line">    if(x == 1) return 1;</div><div class="line">    return x+arguments.callee(x-1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="caller"><a href="#caller" class="headerlink" title="caller"></a>caller</h2><ol>
+<li>说明<br>返回一个对函数的引用，该函数调用了当前函数。<br>functionName.caller<br>functionName 对象是所执行函数的名称。<br>如果是顶层对象调用该functionName函数，则caller为null</li>
+</ol>
+<h2 id="callee"><a href="#callee" class="headerlink" title="callee"></a>callee</h2><p>见上面的递归。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/28/JS数组与对象的合并/" rel="next" title="JS数组与对象的合并">
+                <i class="fa fa-chevron-left"></i> JS数组与对象的合并
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -366,6 +468,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -385,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -493,6 +608,22 @@
 <iframe style="margin-top:20px;height:64px;" frameborder="no" border="0" marginwidth="0" marginheight="0" width="86" height="64" src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=32"></iframe>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#argument"><span class="nav-number">1.</span> <span class="nav-text">argument</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#caller"><span class="nav-number">2.</span> <span class="nav-text">caller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#callee"><span class="nav-number">3.</span> <span class="nav-text">callee</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -612,6 +743,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

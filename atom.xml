@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-28T03:32:17.119Z</updated>
+  <updated>2018-03-05T07:39:49.133Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS中的arguments</title>
+    <link href="http://yoursite.com/2018/03/05/JS%E4%B8%AD%E7%9A%84argument/"/>
+    <id>http://yoursite.com/2018/03/05/JS中的argument/</id>
+    <published>2018-03-05T07:27:59.000Z</published>
+    <updated>2018-03-05T07:39:49.133Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;arguments以及caller与arguments.callee&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JS数组与对象的合并</title>
