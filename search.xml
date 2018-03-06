@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[TCP三次握手和四次挥手全过程]]></title>
+      <url>%2F2018%2F03%2F06%2FTCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%E5%85%A8%E8%BF%87%E7%A8%8B%2F</url>
+      <content type="text"><![CDATA[TCP三次握手和四次挥手全过程 位码位码即tcp标志位，有6种表示： SYN(synchronous建立连接) ACK(acknowledgement 表示响应、确认) PSH(push表示有DATA数据传输) FIN(finish关闭连接) RST(reset表示连接重置) URG(urgent紧急指针字段值有效) 三次握手第一次握手：客户端发送syn包（syn=x）到服务器，并进入SYN_SEND状态，等待服务器确认；第二次握手：服务器收到syn包，必须确认客户的SYN（ack=x+1），同时自己也发送一个SYN包（syn=y），即SYN+ACK包，此时服务器进入SYN_RECV状态；第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK（ack=y+1），此包发送完毕，客户端与服务器进入ESTABLISHED状态，完成三次握手。其中，ack包数值为发送方的发送序号+1（即接收方期望接收的下一个序列号） 四次挥手与建立连接的三次握手类似，断开一个TCP连接则需要四次挥手第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我不会再发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可以接受数据。第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号加一（发送来的FIN的序号）第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我不会再发数据了。第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号加一，至此，完成四次挥手 图解比较容易记，http://img.blog.csdn.net/20160804222416118]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JS同步与异步]]></title>
       <url>%2F2018%2F03%2F06%2FJS%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%2F</url>
       <content type="text"><![CDATA[JS同步与异步以及promise为什么比settimeout先执行 同步与异步12345678910111213&lt;script type=&quot;text/javascript&quot;&gt; console.log( &quot;1&quot; ); setTimeout(function() &#123; console.log( &quot;2&quot; ) &#125;, 0 ); setTimeout(function() &#123; console.log( &quot;3&quot; ) &#125;, 0 ); setTimeout(function() &#123; console.log( &quot;4&quot; ) &#125;, 0 ); console.log( &quot;5&quot; );&lt;/script&gt; 执行结果为15234结论：js先执行同步任务后才执行异步任务。因为js是单线程的，所有任务都必须排队执行，所以如果前一个任务耗时很长，后一个任务就不得不等待。所以就有了任务队列的概念，将异步任务放入任务队列，只有在主线程完成了所有的同步任务后才进入任务队列的任务。 JS异步运行机制 所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。 主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。 一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。 主线程不断重复上面的第三步。 setTimeout与promise12345678setTimeout(function () &#123; console.log(1)&#125;, 0);new Promise(function executor(resolve) &#123; resolve();&#125;).then(function () &#123; console.log(2);&#125;); 虽然setTimeout先加入任务队列但结果仍然是21总结来说，promise函数进入的是PromiseJobs的任务队列，而setTimeout进入的是ScriptJobs的任务队列。当同步任务执行完，会先进入promise的任务队列，结束以后才进入setTimeout的任务队列。至于为何promise队列的优先级高，估计是为了用户体验吧:)自己的理解，请勿转载]]></content>
