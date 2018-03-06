@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-05T07:39:49.133Z</updated>
+  <updated>2018-03-06T06:23:47.394Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS同步与异步</title>
+    <link href="http://yoursite.com/2018/03/06/JS%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5/"/>
+    <id>http://yoursite.com/2018/03/06/JS同步与异步/</id>
+    <published>2018-03-06T06:03:59.000Z</published>
+    <updated>2018-03-06T06:23:47.394Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JS同步与异步以及promise为什么比settimeout先执行&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>JS中的arguments</title>

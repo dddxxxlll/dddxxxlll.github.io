@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[JS同步与异步]]></title>
+      <url>%2F2018%2F03%2F06%2FJS%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5%2F</url>
+      <content type="text"><![CDATA[JS同步与异步以及promise为什么比settimeout先执行 同步与异步12345678910111213&lt;script type=&quot;text/javascript&quot;&gt; console.log( &quot;1&quot; ); setTimeout(function() &#123; console.log( &quot;2&quot; ) &#125;, 0 ); setTimeout(function() &#123; console.log( &quot;3&quot; ) &#125;, 0 ); setTimeout(function() &#123; console.log( &quot;4&quot; ) &#125;, 0 ); console.log( &quot;5&quot; );&lt;/script&gt; 执行结果为15234结论：js先执行同步任务后才执行异步任务。因为js是单线程的，所有任务都必须排队执行，所以如果前一个任务耗时很长，后一个任务就不得不等待。所以就有了任务队列的概念，将异步任务放入任务队列，只有在主线程完成了所有的同步任务后才进入任务队列的任务。 JS异步运行机制 所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。 主线程之外，还存在一个”任务队列”（task queue）。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。 一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。 主线程不断重复上面的第三步。 setTimeout与promise12345678setTimeout(function () &#123; console.log(1)&#125;, 0);new Promise(function executor(resolve) &#123; resolve();&#125;).then(function () &#123; console.log(2);&#125;); 虽然setTimeout先加入任务队列但结果仍然是21总结来说，promise函数进入的是PromiseJobs的任务队列，而setTimeout进入的是ScriptJobs的任务队列。当同步任务执行完，会先进入promise的任务队列，结束以后才进入setTimeout的任务队列。至于为何promise队列的优先级高，估计是为了用户体验吧:)自己的理解，请勿转载]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JS中的arguments]]></title>
       <url>%2F2018%2F03%2F05%2FJS%E4%B8%AD%E7%9A%84argument%2F</url>
       <content type="text"><![CDATA[arguments以及caller与arguments.callee argument说明： 在JavaScript中，arguments是对象的一个特殊属性。arguments对象就像数组，但是它却不是数组。属性： length：获取arguments对象的长度。（函数实参长度） callee：引用当前正在执行的函数（callee也有length属性，为函数形参长度） 隐藏参数 123456789function abc(x,y)&#123; alert(x+&quot;,&quot;+y); for(var i=0;i&lt;=arguments.length;i+=)&#123; alert(&quot; &quot;+arguments[i]); &#125;&#125;abc(1,2,3)//output:1,2//output:1 2 3 改变参数值 123456function abc(x,y,z)&#123; arguments[2] = &quot;hello&quot;; for(var i=0;i&lt;=arguments.length;i+=)&#123; alert(&quot; &quot;+arguments[i]); &#125;&#125;//output: 1 2 hello 递归 12345678910求1到n的自然数之和function add(x)&#123; if(x == 1) return 1; else return n + arguments.callee(n-1);&#125;//其实callee对于匿名函数调用自身时就是一个福音了,比如对于没有命名的函数求1到n自然数之和var result = function(x)&#123; if(x == 1) return 1; return x+arguments.callee(x-1);&#125; caller 说明返回一个对函数的引用，该函数调用了当前函数。functionName.callerfunctionName 对象是所执行函数的名称。如果是顶层对象调用该functionName函数，则caller为null callee见上面的递归。]]></content>
