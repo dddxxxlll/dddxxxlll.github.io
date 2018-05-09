@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript,HTML," />
 
 
 
@@ -89,12 +89,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="董昕亮">
-<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
+<meta name="description" content="Range对象初次尝试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML中的Range对象">
+<meta property="og:url" content="http://yoursite.com/2018/05/09/HTML中的Range对象/index.html">
 <meta property="og:site_name" content="董昕亮">
+<meta property="og:description" content="Range对象初次尝试">
+<meta property="og:updated_time" content="2018-05-09T08:40:06.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="董昕亮">
+<meta name="twitter:title" content="HTML中的Range对象">
+<meta name="twitter:description" content="Range对象初次尝试">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/05/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/09/HTML中的Range对象/"/>
 
 
 
 
 
-  <title> 归档 | 董昕亮 </title>
+  <title> HTML中的Range对象 | 董昕亮 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,103 +295,176 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 18 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/26/爱奇艺优酷免vip方法/" itemprop="url">
-              
-                <span itemprop="name">爱奇艺优酷免vip方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-26T14:15:57+08:00"
-              content="2017-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/08/JS中This的详解/" itemprop="url">
-              
-                <span itemprop="name">JS中This的详解</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-08T16:09:54+08:00"
-              content="2017-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/HTML中的Range对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="董昕亮">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="董昕亮">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML中的Range对象
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T16:09:54+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Range对象初次尝试<br><a id="more"></a><br>工作中遇到了非常奇葩的需求：要实现划选文字然后复制，且点击复制后还需要保持选中。<br>于是只好花时间研究了下Range对象。</p>
+<h2 id="什么是Range对象？"><a href="#什么是Range对象？" class="headerlink" title="什么是Range对象？"></a>什么是Range对象？</h2><p>Range就是指HTML文档中任意一段内容，Range对象下有各种属性，记录了起始点和结束点等各种信息。<br>举个例子，你在网页上左键划下文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aaaaaaa，bbbbbccccc</div></pre></td></tr></table></figure></p>
+<p>则Range对象被创建，内容可能是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aaaaaaa，bbbbb&lt;/p&gt;&lt;p&gt;ccccc</div></pre></td></tr></table></figure></p>
+<p>这种跨标签的选择所有浏览器都会补全Range对象，并且你复制移动的Range对象的HTML文档一定也是可用的。</p>
+<h2 id="浏览器差异"><a href="#浏览器差异" class="headerlink" title="浏览器差异"></a>浏览器差异</h2><p>在不同浏览器下共有三种Range对象：</p>
+<ol>
+<li>W3C Range：W3C标准下的Range对象；</li>
+<li>Mozilla Selection：现代浏览器下的Range对象</li>
+<li>Microsoft Text Range：基于字符串的ie浏览器下的Range对象 = =</li>
+</ol>
+<p>主要工作就是要区分ie和其他浏览器。例如获取用户所划的内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (window.getSelection) &#123; //现代浏览器</div><div class="line">    var range = window.getSelection();</div><div class="line">&#125; else if (document.selection) &#123; //IE浏览器</div><div class="line">    var range = document.selection.createRange();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="读取range对象的内容"><a href="#读取range对象的内容" class="headerlink" title="读取range对象的内容"></a>读取range对象的内容</h2><p>Mozilla Selection对象的格式虽然不是字符串，但可以直接当做字符串展示（没有标签）<br>ie的range对象需要读取他的text属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var selectedText = range;</div><div class="line">if (range.text) &#123;</div><div class="line">    selectedText = range.text;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="从Selection对象创建Range对象"><a href="#从Selection对象创建Range对象" class="headerlink" title="从Selection对象创建Range对象"></a>从Selection对象创建Range对象</h2><p>要完成需求点击复制后还保持文字选中状态就需要在点击导致Selection对象消失后重新让对应文字选中。<br>简单来说就是创建一个和Selection对象一样的Range对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var getRangeObject = function(selectionObject) &#123;</div><div class="line">    if (selectionObject.getRangeAt)</div><div class="line">        return selectionObject.getRangeAt(0);//理想状态直接获取Range对象</div><div class="line">    else &#123;</div><div class="line">        var range = document.createRange();</div><div class="line">        range.setStart(selectionObject.anchorNode,selectionObject.anchorOffset);</div><div class="line">        range.setEnd(selectionObject.focusNode,selectionObject.focusOffset);</div><div class="line">        return range;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var rangeObject = getRangeObject(userSelection);</div></pre></td></tr></table></figure></p>
+<p>其中setStart和setEnd方法的两个参数为：</p>
+<ol>
+<li>range的起、止的Dom节点</li>
+<li>range的起、止的对应偏移量<br>（如果range对象跨节点，则是对应节点的偏移量而不是总截取文字的偏移量）</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>完成需求主要就用了range对象的获取，存储值并重新设置。成功实现了浏览器右键复制的功能= =<br>一下午的时间最主要的收获是想通了一个问题——为什么点击复制后原来选中的文字会不再被选中？<br>主要是当你点击到复制这两个字上又重新生成了新的range对象(起止相同，也就是没有选任何东西。。。)<br>这个原因也导致了不能复制正确的range对象，解决方法是用button标签然后改下css</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/06/TCP三次握手和四次挥手全过程/" rel="next" title="TCP三次握手和四次挥手全过程">
+                <i class="fa fa-chevron-left"></i> TCP三次握手和四次挥手全过程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -395,6 +472,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -414,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -522,6 +612,22 @@
 <iframe style="margin-top:20px;height:64px;" frameborder="no" border="0" marginwidth="0" marginheight="0" width="86" height="64" src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=32"></iframe>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Range对象？"><span class="nav-number">1.</span> <span class="nav-text">什么是Range对象？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器差异"><span class="nav-number">2.</span> <span class="nav-text">浏览器差异</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取range对象的内容"><span class="nav-number">3.</span> <span class="nav-text">读取range对象的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从Selection对象创建Range对象"><span class="nav-number">4.</span> <span class="nav-text">从Selection对象创建Range对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,11 +747,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
