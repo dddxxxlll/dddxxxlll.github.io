@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[移动端手势研究]]></title>
+      <url>%2F2018%2F12%2F13%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%89%8B%E5%8A%BF%E7%A0%94%E7%A9%B6%2F</url>
+      <content type="text"><![CDATA[移动端手势的实现首先这次的手势实现是一个漫长的过程，最开始的需求是右滑手势的识别，很简单直接贴代码1234567891011121314151617181920touchStart (e) &#123; // 记录初始位置 e.preventDefault() // 阻止默认事件，滚动等 this.startX = e.touches[0].clientX // 记录滑动开始的位置&#125;,touchEnd (e) &#123; e.preventDefault() // 阻止默认事件 // 记录结束位置 this.endX = e.changedTouches[0].clientX // 左滑 if (this.startX - this.endX &gt; 80) &#123; &#125; // 右滑 if (this.startX - this.endX &lt; -80) &#123; &#125; this.startX = 0 this.endX = 0&#125;, 手势与点击事件冲突手势的实现十分简单，但当加上touchstart和touchend的时间监听后，发现无法再触发click事件了，当时因为时间很紧，于是采取了将那个页面的所有click事件换成了touchend事件。问题貌似是解决了 用touchend事件替换click事件的弊端，以及影响click事件无法触发的原因替换了click事件后，我自以为耍了小聪明，节省了大把的时间。但半年后，用户反映当滑动的时候正好点在原来点击事件的按钮上，会直接出发按钮上的事件。错误很容易理解，单纯就是触发了touchend事件。原来的小聪明看来是行不通了。只好研究一下影响click事件的根本原因了。 经过查阅资料，我发现原来click事件的触发过程是这样的：touchstart=&gt;touchmove=&gt;touchend=&gt;click如果在点击屏幕的时候手指滑动的话，是不会触发click事件的！！而我的代码阻止了touchstart、touchend的默认行为，浏览器就判定没有触发touchstart以至于没有触发点击事件了。但是如果不加，某些浏览器有时会无法识别touchend事件（200ms超时导致内核不一定会一直处理touchmove事件）问题也要解决，难道要每个click事件分别监听touchstart和touchend的事件来判断到底是点击还是滑动吗？这样可行，但是很麻烦，我就是想用click！ 解决方法想了一下，浏览器之所以采取这个机制应该是为了给用户加上后悔药机制，当用户已经点了某个按钮后发现点错了，为了反悔只要将手指移到其他地方放开就相当于没有点击了。了解了设计的目的，就能明白手机端点击的判定了：只要绑定上click事件的dom既有touchstart又有touchend事件就能触发click了。那么很简单，在touchmove上加上e.preventDefault()不就行了？代码如下：1234567891011121314151617181920212223242526touchStart (e) &#123; // 记录初始位置 //e.preventDefault() // 阻止默认事件，滚动等 this.startX = e.touches[0].clientX // 记录滑动开始的位置&#125;,touchmove (e) &#123; this.endX = e.changedTouches[0].clientX; if (this.startX - this.endX &gt; -80&amp;&amp;this.startX - this.endX &lt; 80) &#123; e.preventDefault() &#125;&#125;,touchEnd (e) &#123; //e.preventDefault() // 阻止默认事件 // 记录结束位置 this.endX = e.changedTouches[0].clientX // 左滑 if (this.startX - this.endX &gt; 80) &#123; &#125; // 右滑 if (this.startX - this.endX &lt; -80) &#123; this.$router.push(&#123;name:&quot;Mealreservation&quot;&#125;) &#125; this.startX = 0 this.endX = 0&#125; 监听完touchmove事件后，果然大功告成。 当然，假如还有问题这篇文章还会更新的（抹泪）。。。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[draft]]></title>
+      <url>%2F2018%2F06%2F14%2Fdraft%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[HTML中的Range对象]]></title>
       <url>%2F2018%2F05%2F09%2FHTML%E4%B8%AD%E7%9A%84Range%E5%AF%B9%E8%B1%A1%2F</url>
       <content type="text"><![CDATA[Range对象初次尝试工作中遇到了非常奇葩的需求：要实现划选文字然后复制，且点击复制后还需要保持选中。于是只好花时间研究了下Range对象。 什么是Range对象？Range就是指HTML文档中任意一段内容，Range对象下有各种属性，记录了起始点和结束点等各种信息。举个例子，你在网页上左键划下文字1aaaaaaa，bbbbbccccc 则Range对象被创建，内容可能是：1aaaaaaa，bbbbb&lt;/p&gt;&lt;p&gt;ccccc 这种跨标签的选择所有浏览器都会补全Range对象，并且你复制移动的Range对象的HTML文档一定也是可用的。 浏览器差异在不同浏览器下共有三种Range对象： W3C Range：W3C标准下的Range对象； Mozilla Selection：现代浏览器下的Range对象 Microsoft Text Range：基于字符串的ie浏览器下的Range对象 = = 主要工作就是要区分ie和其他浏览器。例如获取用户所划的内容：12345if (window.getSelection) &#123; //现代浏览器 var range = window.getSelection();&#125; else if (document.selection) &#123; //IE浏览器 var range = document.selection.createRange();&#125; 读取range对象的内容Mozilla Selection对象的格式虽然不是字符串，但可以直接当做字符串展示（没有标签）ie的range对象需要读取他的text属性：1234var selectedText = range;if (range.text) &#123; selectedText = range.text;&#125; 从Selection对象创建Range对象要完成需求点击复制后还保持文字选中状态就需要在点击导致Selection对象消失后重新让对应文字选中。简单来说就是创建一个和Selection对象一样的Range对象：1234567891011var getRangeObject = function(selectionObject) &#123; if (selectionObject.getRangeAt) return selectionObject.getRangeAt(0);//理想状态直接获取Range对象 else &#123; var range = document.createRange(); range.setStart(selectionObject.anchorNode,selectionObject.anchorOffset); range.setEnd(selectionObject.focusNode,selectionObject.focusOffset); return range; &#125;&#125;var rangeObject = getRangeObject(userSelection); 其中setStart和setEnd方法的两个参数为： range的起、止的Dom节点 range的起、止的对应偏移量（如果range对象跨节点，则是对应节点的偏移量而不是总截取文字的偏移量） 总结完成需求主要就用了range对象的获取，存储值并重新设置。成功实现了浏览器右键复制的功能= =一下午的时间最主要的收获是想通了一个问题——为什么点击复制后原来选中的文字会不再被选中？主要是当你点击到复制这两个字上又重新生成了新的range对象(起止相同，也就是没有选任何东西。。。)这个原因也导致了不能复制正确的range对象，解决方法是用button标签然后改下css]]></content>

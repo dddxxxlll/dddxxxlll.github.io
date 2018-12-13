@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-09T08:40:06.476Z</updated>
+  <updated>2018-12-13T02:58:39.439Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动端手势研究</title>
+    <link href="http://yoursite.com/2018/12/13/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%89%8B%E5%8A%BF%E7%A0%94%E7%A9%B6/"/>
+    <id>http://yoursite.com/2018/12/13/移动端手势研究/</id>
+    <published>2018-12-13T02:23:42.000Z</published>
+    <updated>2018-12-13T02:58:39.439Z</updated>
+    
+    <summary type="html">
+    
+      移动端手势的实现以及与click事件冲突的研究
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>draft</title>
+    <link href="http://yoursite.com/2018/06/14/draft/"/>
+    <id>http://yoursite.com/2018/06/14/draft/</id>
+    <published>2018-06-14T09:09:52.000Z</published>
+    <updated>2018-06-14T09:09:52.313Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>HTML中的Range对象</title>
@@ -40,7 +72,7 @@
     <link href="http://yoursite.com/2018/03/06/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
     <id>http://yoursite.com/2018/03/06/TCP三次握手和四次挥手全过程/</id>
     <published>2018-03-06T06:03:59.000Z</published>
-    <updated>2018-03-06T07:15:35.486Z</updated>
+    <updated>2018-03-06T07:15:35.487Z</updated>
     
     <summary type="html">
     
@@ -58,7 +90,7 @@
     <link href="http://yoursite.com/2018/03/06/JS%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%BC%82%E6%AD%A5/"/>
     <id>http://yoursite.com/2018/03/06/JS同步与异步/</id>
     <published>2018-03-06T06:03:59.000Z</published>
-    <updated>2018-03-06T06:23:47.394Z</updated>
+    <updated>2018-03-06T06:23:47.395Z</updated>
     
     <summary type="html">
     
@@ -112,7 +144,7 @@
     <link href="http://yoursite.com/2018/01/04/%E5%85%83%E7%B4%A0%E9%BB%8F%E8%BF%9E%E7%89%B9%E6%95%88/"/>
     <id>http://yoursite.com/2018/01/04/元素黏连特效/</id>
     <published>2018-01-04T07:29:12.000Z</published>
-    <updated>2018-01-05T09:33:28.030Z</updated>
+    <updated>2018-01-05T09:33:28.031Z</updated>
     
     <summary type="html">
     
@@ -148,7 +180,7 @@
     <link href="http://yoursite.com/2017/08/15/DragModel%E2%80%94%E2%80%94%E5%8F%AF%E6%8B%96%E5%8A%A8%E6%A8%A1%E6%80%81%E6%A1%86/"/>
     <id>http://yoursite.com/2017/08/15/DragModel——可拖动模态框/</id>
     <published>2017-08-15T04:13:58.000Z</published>
-    <updated>2017-08-17T03:53:56.131Z</updated>
+    <updated>2017-08-17T03:53:56.132Z</updated>
     
     <summary type="html">
     
@@ -189,7 +221,7 @@
     <link href="http://yoursite.com/2017/06/07/Websocket%E9%80%9A%E4%BF%97%E6%98%93%E6%87%82%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A/"/>
     <id>http://yoursite.com/2017/06/07/Websocket通俗易懂原理解释/</id>
     <published>2017-06-07T08:22:42.000Z</published>
-    <updated>2017-06-07T08:23:16.978Z</updated>
+    <updated>2017-06-07T08:23:16.979Z</updated>
     
     <summary type="html">
     
@@ -207,7 +239,7 @@
     <link href="http://yoursite.com/2017/05/26/%E7%88%B1%E5%A5%87%E8%89%BA%E4%BC%98%E9%85%B7%E5%85%8Dvip%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2017/05/26/爱奇艺优酷免vip方法/</id>
     <published>2017-05-26T06:15:57.000Z</published>
-    <updated>2017-05-26T06:46:50.064Z</updated>
+    <updated>2017-05-26T06:46:50.065Z</updated>
     
     <summary type="html">
     
@@ -225,7 +257,7 @@
     <link href="http://yoursite.com/2017/05/08/JS%E4%B8%ADThis%E7%9A%84%E8%AF%A6%E8%A7%A3/"/>
     <id>http://yoursite.com/2017/05/08/JS中This的详解/</id>
     <published>2017-05-08T08:09:54.000Z</published>
-    <updated>2017-05-08T09:45:44.796Z</updated>
+    <updated>2017-05-08T09:45:44.797Z</updated>
     
     <summary type="html">
     
@@ -263,7 +295,7 @@
     <link href="http://yoursite.com/2017/04/11/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0div%E6%8B%96%E6%8B%BD%E5%B9%B6%E5%9C%A8%E4%BB%BB%E6%84%8F%E4%BD%8D%E7%BD%AE%E6%94%BE%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/04/11/原生js实现div拖拽并在任意位置放下/</id>
     <published>2017-04-11T10:23:42.000Z</published>
-    <updated>2017-04-13T06:59:52.016Z</updated>
+    <updated>2017-04-13T06:59:52.017Z</updated>
     
     <summary type="html">
     
@@ -317,7 +349,7 @@
     <link href="http://yoursite.com/2017/04/05/ECMAScript6%E6%A6%82%E8%A6%81/"/>
     <id>http://yoursite.com/2017/04/05/ECMAScript6概要/</id>
     <published>2017-04-05T07:43:18.000Z</published>
-    <updated>2017-04-06T02:16:16.719Z</updated>
+    <updated>2017-04-06T02:16:16.720Z</updated>
     
     <summary type="html">
     
@@ -347,7 +379,7 @@
     <link href="http://yoursite.com/2017/04/01/Markdown%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
     <id>http://yoursite.com/2017/04/01/Markdown快速入门/</id>
     <published>2017-04-01T09:14:38.000Z</published>
-    <updated>2017-04-05T08:32:00.760Z</updated>
+    <updated>2017-04-05T08:32:00.761Z</updated>
     
     <summary type="html">
     
